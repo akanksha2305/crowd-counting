@@ -14,9 +14,9 @@ Performance metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Err
 
 The following datasets are used in this repository:
 
-1. **Shanghai Tech Dataset**: Used for crowd counting and density estimation tasks.
-2. **UCF QNRF Dataset**: A large dataset for crowd counting, offering a diverse set of images.
-3. **Mall Dataset**: A smaller dataset for crowd counting and density estimation in a mall setting.
+1. **Shanghai Tech Dataset**: Used for crowd counting and density estimation tasks. (https://paperswithcode.com/dataset/shanghaitech) 
+2. **UCF QNRF Dataset**: A large dataset for crowd counting, offering a diverse set of images. (https://www.crcv.ucf.edu/data/ucf-qnrf/)
+3. **Mall Dataset**: A smaller dataset for crowd counting and density estimation in a mall setting. (https://personal.ie.cuhk.edu.hk/~ccloy/downloads_mall_dataset.html)
 
 ## Models Implemented
 
@@ -44,13 +44,13 @@ MaskFormer is a state-of-the-art model for **instance segmentation**, and in thi
 ```bash
 git clone https://github.com/akanksha2305/crowd-counting.git
 cd crowd-counting
-
+``` 
 ### 2. Install Dependencies
 
 ```bash 
 pip install -r requirements.txt
-
-## 4. Model Selection
+```
+## 3. Model Selection
 
 You can choose from any of the pretrained models (**DenseNet**, **ResNet**, **EfficientNet**) or **MaskFormer** by specifying the model in the `main.py` script.
 
@@ -60,21 +60,21 @@ You can choose from any of the pretrained models (**DenseNet**, **ResNet**, **Ef
 from models.allmodels import load_densenet121
 
 model = load_densenet121()
-
+```
 ## Example for MaskFormer with EfficientNet-B7
 
 ```python
 from models.maskformer import load_maskformer_with_efficientnet_b7
 
 model = load_maskformer_with_efficientnet_b7()
-
+```
 ### 5. Training and Evaluation
 To run training and evaluate the model, execute the main.py script:
 
 ```bash
 Copy code
 python main.py --model efficientnet_b7 --dataset path_to_your_dataset
-
+```
 The main.py script allows you to specify which model to use. It automatically loads the dataset, trains the model, and evaluates it using MAE and MSE metrics.
 
 ### 6. Calculating Metrics
@@ -88,7 +88,7 @@ For instance segmentation, MaskFormer with EfficientNet-B7 backbone is integrate
 ```bash
 python main.py --model maskformer --dataset path_to_your_dataset
 This will run MaskFormer, which utilizes EfficientNet-B7 as the backbone for improved performance in pixel-wise segmentation tasks.
-
+```
 Example Usage
 Here’s an example of how to use the DenseNet-121 model:
 
@@ -97,26 +97,25 @@ Copy code
 from models.allmodels import load_densenet121
 
 model = load_densenet121()
-
+```
 ###  Proceed with training, evaluation, etc.
 Model Training and Evaluation Example:
 ```bash
 python main.py --model densenet121 --dataset dataset/train
-
+```
 ### Example for MaskFormer with EfficientNet-B7:
-bash
+```bash
 python main.py --model maskformer --dataset dataset/train
-Optimizer and Hyperparameters
+```
+### Optimizer and Hyperparameters: 
 For the models, AdamW is used as the optimizer with the following hyperparameters:
+1. Learning rate: 1e-4
+2. Weight decay: 1e-2
+3. These can be adjusted in the main.py script if required.
 
-Learning rate: 1e-4
-Weight decay: 1e-2
-These can be adjusted in the main.py script if required.
-
-Performance Metrics
+### Performance Metrics
 The following performance metrics are implemented for model evaluation:
-
-Mean Absolute Error (MAE)
-Mean Squared Error (MSE)
+1. Mean Absolute Error (MAE)
+2. Mean Squared Error (MSE)
 
 
