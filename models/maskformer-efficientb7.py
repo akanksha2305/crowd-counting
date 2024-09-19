@@ -75,7 +75,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 
 # Set number of epochs
-num_epochs = 2
+num_epochs = 50
 
 for epoch in range(num_epochs):
     print(f"Epoch {epoch} | Training")
