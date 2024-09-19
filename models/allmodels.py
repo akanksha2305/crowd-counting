@@ -3,7 +3,7 @@ from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 
-# Function to build a DenseNet121 model
+## Function to build a DenseNet121 model
 def build_densenet121(input_shape=(224, 224, 3), learning_rate=0.0001):
     base_model = DenseNet121(weights='imagenet', include_top=False, input_shape=input_shape)
     x = base_model.output
