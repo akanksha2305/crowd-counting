@@ -5,7 +5,7 @@
 This repository contains the implementation of MaskFormer architecture using EfficientNet-B7 as backbone for crowd counting. The following tasks are performed:
 * MaskFormer with EfficientNet-B7 is integrated for pixel-wise instance segmentation tasks.
 * Comparison of EfficientNet-B7 with EfficientNet-B0.B4.B5.B6.B7, DenseNet121 and ResNet50.
-* Performance metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Error (MSE)** are used for evaluation.
+* Performance metrics such as Mean Absolute Error (MAE) and Mean Squared Error (MSE) are used for evaluation.
   
 ## Datasets
 
