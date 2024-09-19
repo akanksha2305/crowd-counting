@@ -9,7 +9,7 @@ from skimage.transform import resize
 from skimage.io import imread
 from skimage.color import gray2rgb
 
-# Dataset directory and model options
+## Dataset directory and model options
 DATASET_DIR = './datasets'
 MODEL_OPTIONS = {
     '1': 'DenseNet121',
