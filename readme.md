@@ -55,13 +55,8 @@ python main.py --model efficientnet_b7 --dataset path_to_your_dataset
 ```
 The main.py script allows you to specify which model to use. It automatically loads the dataset, trains the model, and evaluates it using MAE and MSE metrics.
 
-### 6. Calculating Metrics
-Metrics like MAE and MSE are computed in metrics.py. You can compute them after training by running:
-
-```bash
-python metrics.py --predictions path_to_predictions --ground_truth path_to_ground_truth
-7. MaskFormer Segmentation
-For instance segmentation, MaskFormer with EfficientNet-B7 backbone is integrated. Use the following to train MaskFormer:
+### 6. MaskFormer Segmentation
+For instance segmentation, MaskFormer with EfficientNet-B7 backbone is integrated. To train the MaskFormer: 
 
 ```bash
 python main.py --model maskformer --dataset path_to_your_dataset
