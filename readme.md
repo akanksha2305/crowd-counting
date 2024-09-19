@@ -2,40 +2,18 @@
 
 ## Overview
 
-This repository contains the implementation of various deep learning models for image **feature extraction** and **segmentation** tasks using **pretrained Convolutional Neural Networks (CNNs)** and **MaskFormer** for instance segmentation. The following models are included:
-- **DenseNet-121**
-- **ResNet-50**
-- **EfficientNet** (B0, B4, B5, B6, B7)
-- **MaskFormer with EfficientNet-B7 Backbone** for image segmentation
-
-Performance metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Error (MSE)** are also calculated for evaluation.
-
+This repository contains the implementation of MaskFormer architecture using EfficientNet-B7 as backbone for crowd counting. The following tasks are performed:
+* MaskFormer with EfficientNet-B7 is integrated for pixel-wise instance segmentation tasks.
+* Comparison of EfficientNet-B7 with EfficientNet-B0.B4.B5.B6.B7, DenseNet121 and ResNet50.
+* Performance metrics such as **Mean Absolute Error (MAE)** and **Mean Squared Error (MSE)** are used for evaluation.
+  
 ## Datasets
 
 The following datasets are used in this repository:
 
-1. **Shanghai Tech Dataset**: Used for crowd counting and density estimation tasks. (https://paperswithcode.com/dataset/shanghaitech) 
-2. **UCF QNRF Dataset**: A large dataset for crowd counting, offering a diverse set of images. (https://www.crcv.ucf.edu/data/ucf-qnrf/)
-3. **Mall Dataset**: A smaller dataset for crowd counting and density estimation in a mall setting. (https://personal.ie.cuhk.edu.hk/~ccloy/downloads_mall_dataset.html)
-
-## Models Implemented
-
-The following pretrained CNN models are used for feature extraction:
-
-1. **DenseNet-121**
-2. **ResNet-50**
-3. **EfficientNet-B0**
-4. **EfficientNet-B4**
-5. **EfficientNet-B5**
-6. **EfficientNet-B6**
-7. **EfficientNet-B7**
-
-Additionally, **MaskFormer with EfficientNet-B7** is integrated for pixel-wise instance segmentation tasks.
-
-## MaskFormer with EfficientNet-B7
-
-MaskFormer is a state-of-the-art model for **instance segmentation**, and in this repository, we integrate it with the **EfficientNet-B7** backbone to improve segmentation performance. The model is used to detect and segment objects in images at the pixel level, making it useful for tasks like object detection and image understanding.
-
+1. **ShanghaiTech Dataset**: Crowd Counting and density estimation tasks. Link for Dataset: https://paperswithcode.com/dataset/shanghaitech
+2. **UCF-QNRF Dataset**: A large dataset for crowd counting, offering a diverse set of images. Link for Dataset: https://www.crcv.ucf.edu/data/ucf-qnrf/
+3. **Mall Dataset**: A smaller dataset for crowd counting and density estimation in a mall setting. Link for Dataset: https://personal.ie.cuhk.edu.hk/~ccloy/downloads_mall_dataset.html
 
 ## Setup Instructions
 
@@ -52,7 +30,7 @@ pip install -r requirements.txt
 ```
 ## 3. Model Selection
 
-You can choose from any of the pretrained models (**DenseNet**, **ResNet**, **EfficientNet**) or **MaskFormer** by specifying the model in the `main.py` script.
+By specifying the model in the ' main.py ' script, you can choose from any of the pre-trained models (**DenseNet**, **ResNet**, **EfficientNet**) or **MaskFormer**.
 
 #### Example for DenseNet-121:
 
